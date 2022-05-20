@@ -23,7 +23,7 @@ func dbOpenOrCreate() (err error) {
 	}
 
 	db := sqlite.SQLite([]byte(fpath))
-	_ = db.Remove()
+	// _ = db.Remove()
 
 	err = db.FileExists()
 	if err != nil {

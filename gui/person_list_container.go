@@ -101,7 +101,11 @@ func personListContainer() fyne.CanvasObject {
 	dataList.Select(0)
 
 	spacer := layout.NewSpacer()
-	return container.New(layout.NewBorderLayout(spacer, icons, nil, nil), spacer, dataList, icons)
+	return container.New(layout.NewBorderLayout(spacer, icons, nil, nil),
+		spacer,
+		dataList,
+		icons,
+	)
 }
 
 func updateSelection(data events.UserData) {

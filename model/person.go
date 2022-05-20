@@ -23,7 +23,7 @@ CREATE TABLE person (
 
 func CreatePersonTable() (err error) {
 	if err = sqlite.SQLite(nil).Exec(createTableCmd); err == nil {
-		initContent()
+		// initContent()
 	}
 	return
 }

@@ -8,9 +8,9 @@ import (
 
 func InitDataWindow(win fyne.Window) fyne.Window {
 	splitter := container.NewHSplit(personListContainer(), RemindersView().Container())
-	splitter.SetOffset(0.35)
 	win.SetContent(splitter)
-	e := events.NewEvent(events.PersonSelected, map[string]any{"id": int64(3)})
+	splitter.SetOffset(0.25)
+	e := events.NewEvent(events.PersonSelected, events.UserData{"id": int64(1)})
 	events.Instance().Send(e)
 	return win
 }
